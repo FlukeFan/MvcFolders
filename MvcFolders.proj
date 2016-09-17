@@ -57,22 +57,24 @@
   </Target>
 
   <ItemGroup>
-    <ProjectsToBuild Include="MvcTesting\MvcTesting.csproj"/>
-    <ProjectsToBuild Include="MvcTesting.Tests\MvcTesting.Tests.csproj"/>
+    <ProjectsToBuild Include="MvcFolders\MvcFolders.csproj"/>
+    <ProjectsToBuild Include="MvcFolders.StubApp\MvcFolders.StubApp.csproj"/>
+    <ProjectsToBuild Include="MvcFolders.Tests\MvcFolders.Tests.csproj"/>
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectsToClean Include="MvcTesting.Tests\MvcTesting.Tests.csproj"/>
-    <ProjectsToClean Include="MvcTesting\MvcTesting.csproj"/>
+    <ProjectsToClean Include="MvcFolders.Tests\MvcFolders.Tests.csproj"/>
+    <ProjectsToClean Include="MvcFolders.StubApp\MvcFolders.StubApp.csproj"/>
+    <ProjectsToClean Include="MvcFolders\MvcFolders.csproj"/>
   </ItemGroup>
 
   <Target Name="GenerateAssemblyInfo" Inputs="Build\Common.targets" Outputs="_output\AssemblyInfo.cs">
     <MakeDir Directories="_output" />
     <AssemblyInfo
       CodeLanguage="CS"
-      AssemblyDescription="MvcTesting"
-      AssemblyTitle="MvcTesting"
-      AssemblyProduct="MvcTesting $(Configuration) $(Version)"
+      AssemblyDescription="Mvc Feature Folders"
+      AssemblyTitle="MvcFolders"
+      AssemblyProduct="MvcFolders $(Configuration) $(Version)"
       AssemblyVersion="$(Version)"
       OutputFile="_output\AssemblyInfo.cs"
       />

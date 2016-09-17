@@ -118,6 +118,12 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MvcFolders\MvcFolders.csproj">
+      <Project>{72685dc9-ee55-45e9-a884-6eb8d8b04e20}</Project>
+      <Name>MvcFolders</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

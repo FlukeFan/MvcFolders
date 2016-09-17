@@ -118,6 +118,12 @@
   <ItemGroup>
     <Content Include="CoverageFilter.txt" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MvcFolders.StubApp\MvcFolders.StubApp.csproj">
+      <Project>{658edb97-a4d6-4b5a-acc2-344ec7708130}</Project>
+      <Name>MvcFolders.StubApp</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Target Name="AfterBuild">
     <CallTarget Targets="RunTestsWithCoverage" />
   </Target>

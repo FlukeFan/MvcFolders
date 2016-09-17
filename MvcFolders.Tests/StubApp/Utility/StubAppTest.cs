@@ -11,7 +11,7 @@ namespace Lucid.Web.Tests.StubApp.Utility
 
         public static void SetUpWebHost()
         {
-            StubApp = AspNetTestHost.For(@"..\..\..\Lucid.Web.StubApp", typeof(TestHostStartup));
+            StubApp = AspNetTestHost.For(@"..\..\..\MvcFolders.StubApp", typeof(TestHostStartup));
         }
 
         public static void TearDownWebHost()

@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$id$</title>
+    <description>
+      Some utility classes to help implement Feature Folders in a (pre core) MVC application.
+    </description>
+    <tags>Asp.Net Mvc FeatureFolders Feature Folders</tags>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <authors>Richard Brown</authors>
+    <licenseUrl>https://raw.githubusercontent.com/FlukeFan/MvcFolders/master/LICENSE.txt</licenseUrl>
+    <projectUrl>https://github.com/FlukeFan/MvcFolders</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/FlukeFan/MvcFolders/master/icon.png</iconUrl>
+  </metadata>
+</package>

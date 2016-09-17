@@ -1,11 +1,11 @@
 ﻿using System.Linq;
 using System.Web.Mvc;
 
-namespace Lucid.Web.Routing
+namespace MvcFolders.Routing
 {
-    public class LucidRazorViewEngine : RazorViewEngine
+    public class MvcFoldersRazorViewEngine : RazorViewEngine
     {
-        public LucidRazorViewEngine(string rootFolder)
+        public MvcFoldersRazorViewEngine(string rootFolder)
         {
             foreach (var fileExtension in FileExtensions)
             {

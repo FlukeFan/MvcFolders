@@ -4,13 +4,13 @@ using System.Reflection;
 using System.Web.Mvc;
 using System.Web.Mvc.Async;
 using System.Web.Routing;
-using Lucid.Web.Routing;
+using MvcFolders.Routing;
 
-namespace Lucid.Web
+namespace MvcFolders
 {
     public class FeatureFolders
     {
-        public LucidRoute       Route               { get; protected set; }
+        public MvcFoldersRoute       Route               { get; protected set; }
         public string           RootFolderNamespace { get; protected set; }
         public string           RootFolder          { get; protected set; }
         public FeatureActions   RootActions         { get; protected set; }
@@ -22,7 +22,7 @@ namespace Lucid.Web
             RootActions = new FeatureActions(null);
 
             BuildActions(controllersAssembly);
-            Route = new LucidRoute(this);
+            Route = new MvcFoldersRoute(this);
         }
 
         public static FeatureFolders Register(Assembly controllerAssembly, string rootFolderNamespace)
@@ -34,11 +34,11 @@ namespace Lucid.Web
         {
             var features = new FeatureFolders(controllerAssembly, rootFolderNamespace);
 
-            routes.Add("LucidFeatureFolders", features.Route);
+            routes.Add("MvcFeatureFolders", features.Route);
 
             globalFilters.Add(new RouteParameterFilter());
 
-            var engine = new LucidRazorViewEngine(features.RootFolder);
+            var engine = new MvcFoldersRazorViewEngine(features.RootFolder);
             viewEngines.Clear();
             viewEngines.Add(engine);
 

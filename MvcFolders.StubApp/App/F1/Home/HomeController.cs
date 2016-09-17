@@ -1,6 +1,6 @@
 ﻿using System.Web.Mvc;
 
-namespace Lucid.Web.StubApp.App.F1.Home
+namespace MvcFolders.StubApp.App.F1.Home
 {
     public class HomeController : Controller
     {

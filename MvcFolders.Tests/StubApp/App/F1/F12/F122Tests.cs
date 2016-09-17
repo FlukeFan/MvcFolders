@@ -1,8 +1,8 @@
 ﻿using FluentAssertions;
-using Lucid.Web.Tests.StubApp.Utility;
+using MvcFolders.Tests.StubApp.Utility;
 using NUnit.Framework;
 
-namespace Lucid.Web.Tests.StubApp.App.F1.F12
+namespace MvcFolders.Tests.StubApp.App.F1.F12
 {
     [TestFixture]
     public class F122Tests : StubAppTest

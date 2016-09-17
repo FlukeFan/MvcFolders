@@ -1,6 +1,6 @@
 ﻿using System.Web.Mvc;
 
-namespace Lucid.Web.StubApp.App.F2
+namespace MvcFolders.StubApp.App.F2
 {
     public class F2Controller : Controller
     {

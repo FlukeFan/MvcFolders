@@ -1,7 +1,7 @@
-﻿using Lucid.Web.Tests.StubApp.Utility;
+﻿using MvcFolders.Tests.StubApp.Utility;
 using NUnit.Framework;
 
-namespace Lucid.Web.Tests.StubApp
+namespace MvcFolders.Tests.StubApp
 {
     [SetUpFixture]
     public class SetUpFixture

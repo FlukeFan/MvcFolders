@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 
-namespace Lucid.Web.Routing
+namespace MvcFolders.Routing
 {
     public class FeatureActions
     {

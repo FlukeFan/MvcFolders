@@ -3,7 +3,7 @@ using System.Reflection;
 using System.Web.Mvc;
 using System.Web.Routing;
 
-namespace Lucid.Web.Routing
+namespace MvcFolders.Routing
 {
     public class ActionData
     {
@@ -24,9 +24,9 @@ namespace Lucid.Web.Routing
             Depth = depth;
         }
 
-        public RouteData CreateRouteData(LucidRoute lucidRoute)
+        public RouteData CreateRouteData(MvcFoldersRoute folderRoute)
         {
-            var routeData = new RouteData(lucidRoute, new MvcRouteHandler());
+            var routeData = new RouteData(folderRoute, new MvcRouteHandler());
 
             var dataTokens = routeData.DataTokens;
             dataTokens.Add("Namespaces", new string[] { Namespace });

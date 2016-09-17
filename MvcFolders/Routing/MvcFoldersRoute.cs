@@ -3,17 +3,17 @@ using System.Linq;
 using System.Web;
 using System.Web.Routing;
 
-namespace Lucid.Web.Routing
+namespace MvcFolders.Routing
 {
-    public class LucidRoute : RouteBase
+    public class MvcFoldersRoute : RouteBase
     {
-        public const string RouteDataParametersKey = "_lucidRouteDataParameters";
+        public const string RouteDataParametersKey = "_mvcFoldersRouteDataParameters";
 
-        private FeatureFolders _lucidFeatureFolders;
+        private FeatureFolders _mvcFeatureFolders;
 
-        public LucidRoute(FeatureFolders lucidFeatureFolders)
+        public MvcFoldersRoute(FeatureFolders featureFolders)
         {
-            _lucidFeatureFolders = lucidFeatureFolders;
+            _mvcFeatureFolders = featureFolders;
         }
 
         public override RouteData GetRouteData(HttpContextBase httpContext)
@@ -21,7 +21,7 @@ namespace Lucid.Web.Routing
             var request = httpContext.Request;
             var path = (request.AppRelativeCurrentExecutionFilePath + request.PathInfo).Substring(2); // remove ~/
             var pathParts = path.Split('/').Where(s => !string.IsNullOrEmpty(s)).ToArray();
-            var actionData = _lucidFeatureFolders.FindActionData(pathParts, 0);
+            var actionData = _mvcFeatureFolders.FindActionData(pathParts, 0);
 
             if (actionData == null)
                 return null;

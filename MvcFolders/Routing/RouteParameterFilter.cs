@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Web.Mvc;
 
-namespace Lucid.Web.Routing
+namespace MvcFolders.Routing
 {
     public class RouteParameterFilter : ActionFilterAttribute, IAuthorizationFilter
     {
@@ -15,7 +15,7 @@ namespace Lucid.Web.Routing
             // but before parameter binding has occurred.
 
             var routeData = filterContext.RouteData;
-            string[] urlParameters = (string[])routeData.DataTokens[LucidRoute.RouteDataParametersKey];
+            string[] urlParameters = (string[])routeData.DataTokens[MvcFoldersRoute.RouteDataParametersKey];
 
             if (urlParameters == null)
                 return;

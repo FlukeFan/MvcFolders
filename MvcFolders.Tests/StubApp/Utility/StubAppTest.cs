@@ -1,8 +1,8 @@
-﻿using Lucid.Web.StubApp.App.Home;
+﻿using MvcFolders.StubApp.App.Home;
 using MvcTesting.Hosting;
 using NUnit.Framework;
 
-namespace Lucid.Web.Tests.StubApp.Utility
+namespace MvcFolders.Tests.StubApp.Utility
 {
     [TestFixture]
     public abstract class StubAppTest

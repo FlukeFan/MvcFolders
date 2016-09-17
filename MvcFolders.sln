@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcFolders", "MvcFolders\MvcFolders.csproj", "{72685DC9-EE55-45E9-A884-6EB8D8B04E20}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcFolders.StubApp", "MvcFolders.StubApp\MvcFolders.StubApp.csproj", "{658EDB97-A4D6-4B5A-ACC2-344EC7708130}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcFolders.Tests", "MvcFolders.Tests\MvcFolders.Tests.csproj", "{37038513-1CFC-4439-A5BB-C5CB2A4B75C4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{58126DCF-EEEC-4160-8C34-CC93D9DFD6BD}"
+	ProjectSection(SolutionItems) = preProject
+		Build\Common.targets = Build\Common.targets
+		Build\MvcFolders.nunit = Build\MvcFolders.nunit
+		MvcFolders.proj = MvcFolders.proj
+		Build\VerifyCoverage.js = Build\VerifyCoverage.js
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Items", "Items", "{ED556FB8-FDDF-4FE5-BC00-2D4525BE771D}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		CommandPrompt.bat = CommandPrompt.bat
+		LICENSE.txt = LICENSE.txt
+		MvcFolders.proj = MvcFolders.proj
+		readme.txt = readme.txt
+		RunNUnit.bat = RunNUnit.bat
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{72685DC9-EE55-45E9-A884-6EB8D8B04E20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72685DC9-EE55-45E9-A884-6EB8D8B04E20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72685DC9-EE55-45E9-A884-6EB8D8B04E20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72685DC9-EE55-45E9-A884-6EB8D8B04E20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{658EDB97-A4D6-4B5A-ACC2-344EC7708130}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{658EDB97-A4D6-4B5A-ACC2-344EC7708130}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{658EDB97-A4D6-4B5A-ACC2-344EC7708130}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{658EDB97-A4D6-4B5A-ACC2-344EC7708130}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37038513-1CFC-4439-A5BB-C5CB2A4B75C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37038513-1CFC-4439-A5BB-C5CB2A4B75C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37038513-1CFC-4439-A5BB-C5CB2A4B75C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37038513-1CFC-4439-A5BB-C5CB2A4B75C4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

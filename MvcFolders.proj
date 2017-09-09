@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <Import Project="Build\Common.targets" />
-  <Import Project="$(MSBuildCommunityTasksPath)\MSBuild.Community.Tasks.Targets" />
+  <Import Project="$(MSBuildCommunityTasksPath)\MSBuild.Community.Tasks.Targets" Condition="Exists('$(MSBuildCommunityTasksPath)\MSBuild.Community.Tasks.Targets')" />
 
   <PropertyGroup>
     <SolutionDir>$(MSBuildProjectDirectory)\</SolutionDir>
@@ -16,6 +16,10 @@
   <ItemGroup>
     <MSBuildXsd Include="lib\MSBuild\*.xsd" />
   </ItemGroup>
+
+  <Target Name="RestorePackages">
+    <Exec Command="lib\NuGet\NuGet.exe restore" />
+  </Target>
 
   <Target Name="Init">
     <CreateProperty Value="Configuration=$(Configuration);RunTests=$(RunTests)">

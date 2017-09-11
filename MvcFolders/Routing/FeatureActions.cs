@@ -7,27 +7,33 @@ namespace MvcFolders.Routing
 {
     public class FeatureActions
     {
-        public FeatureActions                       Parent      { get; protected set; }
-        public IDictionary<string, FeatureActions>  Paths       { get; protected set; }
-        public ActionData                           ActionData  { get; protected set; }
+        public FeatureActions                       Parent              { get; protected set; }
+        public IDictionary<string, FeatureActions>  Paths               { get; protected set; }
+        public IDictionary<int, ActionData>         ActionParameters    { get; protected set; }
 
         public FeatureActions(FeatureActions parent)
         {
             Parent = parent;
             Paths = new Dictionary<string, FeatureActions>();
+            ActionParameters = new Dictionary<int, ActionData>();
         }
 
         public ActionData FindActionData(string[] pathParts, int partIndex)
         {
+            var parameterCount = pathParts.Length - partIndex;
+
+            if (ActionParameters.ContainsKey(parameterCount))
+                return ActionParameters[parameterCount];
+
             if (partIndex >= pathParts.Length)
-                return ActionData;
+                return null;
 
             var part = pathParts[partIndex].ToLower();
 
             if (Paths.ContainsKey(part))
                 return Paths[part].FindActionData(pathParts, partIndex + 1);
 
-            return ActionData;
+            return null;
         }
 
         public void Add(Type controllerType, string controllerName, string areaName, string[] controllerFolders, int depth)
@@ -40,7 +46,8 @@ namespace MvcFolders.Routing
 
         public void AddAction(Type controllerType, MethodInfo action, string controllerName, string areaName, int depth)
         {
-            ActionData = new ActionData(controllerType, action, controllerName, areaName, depth);
+            var actionData = new ActionData(controllerType, action, controllerName, areaName, depth);
+            ActionParameters.Add(actionData.Parameters.Count, actionData);
         }
 
         private void AddSubfolder(Type controllerType, string controllerName, string areaName, string[] controllerFolders, int depth)

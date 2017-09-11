@@ -10,7 +10,7 @@ namespace MvcFolders
 {
     public class FeatureFolders
     {
-        public MvcFoldersRoute       Route               { get; protected set; }
+        public MvcFoldersRoute  Route               { get; protected set; }
         public string           RootFolderNamespace { get; protected set; }
         public string           RootFolder          { get; protected set; }
         public FeatureActions   RootActions         { get; protected set; }

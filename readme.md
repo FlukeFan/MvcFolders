@@ -1,5 +1,7 @@
 
+<pre>
 [![Build Status](https://ci.appveyor.com/api/projects/status/github/FlukeFan/MvcFolders?svg=true)](https://ci.appveyor.com/project/FlukeFan/mvcfolders)
+
 
 MvcFolders
 ==========

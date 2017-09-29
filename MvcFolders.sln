@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcFolders", "MvcFolders\MvcFolders.csproj", "{72685DC9-EE55-45E9-A884-6EB8D8B04E20}"
 EndProject
@@ -23,7 +23,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Items", "Items", "{ED556FB8
 		CommandPrompt.bat = CommandPrompt.bat
 		LICENSE.txt = LICENSE.txt
 		MvcFolders.proj = MvcFolders.proj
-		readme.txt = readme.txt
+		readme.md = readme.md
 		RunNUnit.bat = RunNUnit.bat
 	EndProjectSection
 EndProject
@@ -48,5 +48,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DF8AC758-BAAE-48EB-9E83-87F22D3E8079}
 	EndGlobalSection
 EndGlobal

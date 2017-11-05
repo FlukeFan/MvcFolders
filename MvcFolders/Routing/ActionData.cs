@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Reflection;
 using System.Web.Mvc;
 using System.Web.Routing;
@@ -14,7 +13,6 @@ namespace MvcFolders.Routing
         public string           ActionName      { get; protected set; }
         public string           AreaName        { get; protected set; }
         public int              Depth           { get; protected set; }
-        public IList<string>    Parameters      { get; protected set; }
 
         public ActionData(Type controllerType, MethodInfo action, string controllerName, string areaName, int depth)
         {
@@ -24,10 +22,6 @@ namespace MvcFolders.Routing
             ActionName = action.Name;
             AreaName = areaName;
             Depth = depth;
-            Parameters = new List<string>();
-
-            foreach (var param in action.GetParameters())
-                Parameters.Add(param.Name);
         }
 
         public RouteData CreateRouteData(MvcFoldersRoute folderRoute)

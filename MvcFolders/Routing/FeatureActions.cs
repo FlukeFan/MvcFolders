@@ -46,8 +46,13 @@ namespace MvcFolders.Routing
 
         public void AddAction(Type controllerType, MethodInfo action, string controllerName, string areaName, int depth)
         {
+            var parameterCount = action.GetParameters().Length;
+
+            if (ActionParameters.ContainsKey(parameterCount))
+                return;
+
             var actionData = new ActionData(controllerType, action, controllerName, areaName, depth);
-            ActionParameters.Add(actionData.Parameters.Count, actionData);
+            ActionParameters.Add(parameterCount, actionData);
         }
 
         private void AddSubfolder(Type controllerType, string controllerName, string areaName, string[] controllerFolders, int depth)

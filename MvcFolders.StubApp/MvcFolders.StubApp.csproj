@@ -20,6 +20,7 @@
     <UseGlobalApplicationHostFile />
     <TargetFrameworkProfile />
     <ProjectGuid>{658EDB97-A4D6-4B5A-ACC2-344EC7708130}</ProjectGuid>
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -98,6 +99,7 @@
     <Content Include="packages.config" />
     <Content Include="App\F1\F12\F121\Index.cshtml" />
     <Content Include="App\F3\Index.cshtml" />
+    <Content Include="App\F2\Form.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

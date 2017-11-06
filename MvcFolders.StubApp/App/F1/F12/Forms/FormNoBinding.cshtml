@@ -1,0 +1,9 @@
+﻿@inherits System.Web.Mvc.WebViewPage<int>
+<html>
+<body>
+    <form method="post" action="@Request.RawUrl">
+        <input type="hidden" name="ModelValue" value="@("test" + Model)" />
+        <input type="submit" value="Submit" />
+    </form>
+</body>
+</html>

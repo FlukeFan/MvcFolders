@@ -99,7 +99,10 @@
     <Content Include="packages.config" />
     <Content Include="App\F1\F12\F121\Index.cshtml" />
     <Content Include="App\F3\Index.cshtml" />
-    <Content Include="App\F2\Form.cshtml" />
+    <Content Include="App\F1\F12\Forms\Form.cshtml" />
+    <Content Include="App\F1\F12\Forms\FormModel.cshtml" />
+    <Content Include="App\F1\F12\Forms\FormModelAndRouteParameter.cshtml" />
+    <Content Include="App\F1\F12\Forms\FormNoBinding.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -112,6 +115,8 @@
     <Compile Include="App\F1\F11\F11Controller.cs" />
     <Compile Include="App\F1\F12\F121\F121Controller.cs" />
     <Compile Include="App\F1\F12\F122\F122Controller.cs" />
+    <Compile Include="App\F1\F12\Forms\FormModel.cs" />
+    <Compile Include="App\F1\F12\Forms\FormsController.cs" />
     <Compile Include="App\F1\Home\HomeController.cs" />
     <Compile Include="App\F2\F2Controller.cs" />
     <Compile Include="App\F3\F3Controller.cs" />

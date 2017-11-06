@@ -23,8 +23,13 @@ namespace MvcFolders.Routing
             var actionDescriptor = filterContext.ActionDescriptor;
             var actionParameters = actionDescriptor.GetParameters();
 
+            var isPost = (filterContext.HttpContext.Request.RequestType ?? "").ToLower() == "post";
+
             for (int i = 0; i < urlParameters.Length; i++)
             {
+                if (i >= actionParameters.Length && isPost)
+                    break; // we can ignore extra parameters during a POST
+
                 if (i >= actionParameters.Length)
                     throw new Exception(
                         string.Format("Too many URL parameters {0} supplied for method {1} on {2}",
@@ -38,6 +43,9 @@ namespace MvcFolders.Routing
 
                 if (routeData.Values.ContainsKey(parameterName))
                     throw new Exception("RouteData already contains parameter: " + parameterName);
+
+                if (isPost && !actionParameter.ParameterType.FullName.StartsWith("System."))
+                    continue; // don't prevent normal model binding from taking place during a POST unless it's a system defined type (e.g., string, int)
 
                 routeData.Values.Add(parameterName, urlParameter);
             }
